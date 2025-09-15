@@ -1,0 +1,26 @@
+#####################
+# Arquivo de variáveis do projeto
+# Copie este arquivo para terraform.tfvars e edite conforme seu ambiente
+#####################
+
+# ID do Tenant (Azure AD)
+tenant_id = "11111111-1111-1111-1111-111111111111"
+
+# ID da Assinatura onde os recursos serão criados
+subscription_id = "22222222-2222-2222-2222-222222222222"
+
+# Nome do Resource Group já existente no Azure
+rg_name = "rg-exemplo"
+
+# Nome da VNET existente onde as VMs serão conectadas
+vnet_name = "vnet-exemplo"
+
+# Nome da Subnet dentro da VNET
+subnet_name = "subnet1"
+
+# Nome do Network Security Group (NSG) existente
+nsg_name = "nsg-exemplo"
+
+# Lista de nomes das VMs a serem criadas - customize a lista de acordo com a quantidade/nomes desejados
+# Por exemplo, se a lista tem 2 nomes de VMs, serão criadas 2 VMs
+vm_names = ["vm-exemplo-01", "vm-exemplo-02"]
