@@ -69,3 +69,18 @@ resource "azurerm_virtual_machine_extension" "add_users" {
   }
   SETTINGS
 }
+
+# Configurando auto-shutdown nas VMs (22h | UTC-3)
+resource "azurerm_dev_test_global_vm_shutdown_schedule" "autoshutdown" {
+  for_each            = toset(var.vm_names)
+  virtual_machine_id = azurerm_windows_virtual_machine.vm[each.key].id
+  location           = var.rg_location
+  enabled            = true
+
+  daily_recurrence_time = "2200"
+  timezone              = "E. South America Standard Time"
+
+  notification_settings {
+    enabled = false
+    }
+}
