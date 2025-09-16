@@ -75,14 +75,19 @@ Nessa página, o usuário deve seguir especialmente as etapas:
     
     > *Após aprovação, efetivamente cria / altera (apply*)
 
+<br>
+
+6. Após criadas as máquinas virtuais, é gerado um output com o nome das VMs e seus respectivos IPs públicos:
+print aqui
+📝 ***Dica**: utilize o output para copiar os IPs gerados*
 
 <br>
 ✅ O ambiente está pronto!
 
+
 <br>
 
 ---
-
 
 ### 🧹 Para excluir todos os recursos criados:
     
