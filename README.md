@@ -32,6 +32,21 @@ Nessa página, o usuário deve seguir especialmente as etapas:
 
 <br>
 
+## ☁️ Pré-requisitos no Azure
+
+Este projeto assume que alguns recursos já estão criados no Azure antes do provisionamento, para que as máquinas virtuais possam ser conectadas ou adicionadas corretamente:
+
+- Grupo de recursos (Resource Group)
+- Rede virtual (Virtual Network)
+- Sub-rede (Subnet)
+- Grupo de segurança de rede (Network Security Group)
+
+<br>
+
+⚠️ **Importante:** Certifique-se de que esses recursos existam e que estejam corretamente referenciados no arquivo **tfvars**. Caso contrário, o Terraform pode não conseguir criar as máquinas virtuais.
+
+<br>
+
 ## 🛠️ Provisionando as máquinas virtuais
 
 1. Clone o repositório:
