@@ -22,3 +22,15 @@ variable "nsg_id" {
   description = "ID da NSG pré-existente"
   type        = string
 }
+
+variable "admin_user" { 
+  description = "Nome do usuário administrador das VMs a serem criadas"
+  type        = string
+  sensitive = true
+}
+
+variable "admin_password" { 
+  description = "Senha do usuário administrador das VMs a serem criadas"
+  type        = string
+  sensitive = true
+}

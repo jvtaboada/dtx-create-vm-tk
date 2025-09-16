@@ -24,3 +24,9 @@ nsg_name = "nsg-exemplo"
 # Lista de nomes das VMs a serem criadas - customize a lista de acordo com a quantidade/nomes desejados
 # Por exemplo, se a lista tem 2 nomes de VMs, serão criadas 2 VMs
 vm_names = ["vm-exemplo-01", "vm-exemplo-02"]
+
+# Usuário administrador das VMs a serem criadas
+# As regras de usuário e senha são definidas pela Microsoft
+# Caso os valores não atendam aos critérios, o Terraform exibirá erro no terminal
+admin_user = "seu_usuario_aqui"
+admin_password = "sua_senha_aqui"

@@ -33,8 +33,8 @@ resource "azurerm_windows_virtual_machine" "vm" {
   location            = var.rg_location
   size                = "Standard_B2s"
 
-  admin_username      = "adminuser" ## sensitive data ou variavel
-  admin_password      = "P@$$w0rd1234!" ## sensitive data ou variavel
+  admin_username      = var.admin_user
+  admin_password      = var.admin_password
   
   network_interface_ids = [
     azurerm_network_interface.nic[each.key].id,
