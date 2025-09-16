@@ -93,8 +93,9 @@ Este projeto assume que alguns recursos já estão criados no Azure antes do pro
 <br>
 
 6. Após criadas as máquinas virtuais, é gerado um output com o nome das VMs e seus respectivos IPs públicos:
-print aqui
-📝 ***Dica**: utilize o output para copiar os IPs gerados*
+    <img width="581" height="317" alt="exemplo-output" src="https://github.com/user-attachments/assets/e8b972da-e45c-4d8e-8941-164555a171d6" />
+
+    📝 ***Dica**: utilize o output para copiar os IPs gerados*
 
 <br>
 ✅ O ambiente está pronto!
