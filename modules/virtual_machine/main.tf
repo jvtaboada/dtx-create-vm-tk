@@ -53,7 +53,6 @@ resource "azurerm_windows_virtual_machine" "vm" {
   }
 }
 
-# Script de criação de 2 usuários no Windows
 resource "azurerm_virtual_machine_extension" "add_users" {
   for_each            = toset(var.vm_names)
   name                 = "add-users"
@@ -62,15 +61,13 @@ resource "azurerm_virtual_machine_extension" "add_users" {
   type                 = "CustomScriptExtension"
   type_handler_version = "1.10"
 
-    ## sensitive data nos usuários e senha
   settings = <<SETTINGS
   {
-    "commandToExecute": "powershell -ExecutionPolicy Unrestricted -Command \"net user dataex1 Teste123* /add; net user dataex2 Teste123* /add; net localgroup Administrators dataex1 /add; net localgroup Administrators dataex2 /add\""
+    "commandToExecute": "powershell -ExecutionPolicy Unrestricted -Command \"net user dataex1 Enterprise001! /add; net user dataex2 Enterprise001! /add; net localgroup Administrators dataex1 /add; net localgroup Administrators dataex2 /add\""
   }
   SETTINGS
 }
 
-# Configurando auto-shutdown nas VMs (22h | UTC-3)
 resource "azurerm_dev_test_global_vm_shutdown_schedule" "autoshutdown" {
   for_each            = toset(var.vm_names)
   virtual_machine_id = azurerm_windows_virtual_machine.vm[each.key].id
